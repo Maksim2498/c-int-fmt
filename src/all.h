@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Imports all other library header files
+ */
+
 #ifndef FOMINMV_INTSTR_ALL_H
 #define FOMINMV_INTSTR_ALL_H
 

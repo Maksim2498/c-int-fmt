@@ -4,19 +4,6 @@
 #include <ctype.h>
 #include <string.h>
 
-const struct mint_parse_opts MINT_PARSE_OPTS_DEFAULT = {
-    .group_sep         = NULL,
-
-    .sign_pres         = MINT_PRES_OPT,
-
-    .radix             = MINT_RADIX_AUTO,
-    .radix_prefix_case = MINT_CASE_ANY,
-    .digit_case        = MINT_CASE_ANY,
-    .radix_prefix_pres = MINT_PRES_OPT,
-
-    .skip_ws           = true
-};
-
 struct mread_str_arg_ {
     const char *str;
     size_t      pos;

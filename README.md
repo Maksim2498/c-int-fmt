@@ -87,4 +87,12 @@ cmake --install build
 
 ## Documentation
 
-Comming soon...
+To build documentation locally you must have [Doxygen](https://www.doxygen.nl/) installed.
+
+Go to the project's root folder and run the following command in the terminal:
+
+```console
+doxygen
+```
+
+After this you will have documentaion build in the `/docs` folder.

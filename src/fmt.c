@@ -3,20 +3,6 @@
 #include <assert.h>
 #include <limits.h>
 
-const struct mint_fmt_opts MINT_FMT_OPTS_DEFAULT = {
-    .group_sep         = NULL,
-    .group_size        = 0,
-
-    .min_digits        = 0,
-    .digit_case        = MINT_CASE_UPPER,
-
-    .plus              = MINT_PLUS_NONE,
-
-    .radix             = 10,
-    .radix_prefix_case = MINT_CASE_LOWER,
-    .show_radix_prefix = true
-};
-
 struct mwrite_str_arg_ {
     char   *str;
     size_t  pos;
