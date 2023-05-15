@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.12)
 project(intstr
         VERSION      1.0.0
         LANGUAGES    C
-        DESCRIPTION  "A small C library for integers parsing and formatting"
+        DESCRIPTION  "A small C library for integer parsing and formatting"
         HOMEPAGE_URL https://github.com/Maksim2498/c-int-str)
 
 add_library(fominmv-intstr
