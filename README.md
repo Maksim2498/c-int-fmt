@@ -12,6 +12,13 @@
 ## About
 
 This is a small C99 library for integer parsing and formatting.
+Parsing and fomratting functions work in stream-mode, i.e. they
+accept `read` and `write` callback functions as arguments and hence
+can work with any kind of character streams such as files and strings.
+
+Out of the box there are special versions of parse and format
+functions with `_file`, `_str` and `_str_n` suffixes which handle
+files, strings and strings of specified size respectively.
 
 ## Examples
 
