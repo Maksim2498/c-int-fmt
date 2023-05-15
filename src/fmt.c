@@ -23,8 +23,8 @@ struct mwrite_str_arg_ {
     size_t  len;
 };
 
-static size_t mwrite_str_(char c, struct mwrite_str_arg_ *arg);
-static size_t mwrite_file_(char c, FILE *file);
+static bool mwrite_str_(char c, struct mwrite_str_arg_ *arg);
+static bool mwrite_file_(char c, FILE *file);
 static size_t mxint_fmt_(uintmax_t val, bool is_signed, mint_fmt_write_t write, void *write_arg, const struct mint_fmt_opts *opts);
 static size_t mxint_fmt_write_str_(const char *str, mint_fmt_write_t write, void *write_arg);
 
@@ -48,7 +48,7 @@ size_t muint_fmt_str(uintmax_t val, char *str, size_t len, const struct mint_fmt
     return muint_fmt(val, (mint_fmt_write_t) mwrite_str_, &arg, opts);
 }
 
-size_t mwrite_str_(char c, struct mwrite_str_arg_ *arg) {
+bool mwrite_str_(char c, struct mwrite_str_arg_ *arg) {
     bool write = arg->pos < arg->len;
 
     if (write) {
@@ -69,9 +69,9 @@ size_t muint_fmt_file(uintmax_t val, FILE *file, const struct mint_fmt_opts *opt
     return muint_fmt(val, (mint_fmt_write_t) mwrite_file_, file, opts);
 }
 
-size_t mwrite_file_(char c, FILE *file) {
+bool mwrite_file_(char c, FILE *file) {
     return file ? fputc(c, file) != EOF
-                : 1;
+                : true;
 }
 
 size_t mint_fmt(intmax_t val, mint_fmt_write_t write, void *write_arg, const struct mint_fmt_opts *opts) {
