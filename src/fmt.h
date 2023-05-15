@@ -26,8 +26,10 @@ struct mint_fmt_opts {
     bool            show_radix_prefix;
 };
 
-size_t mint_fmt_str(intmax_t val, char *str, size_t len, const struct mint_fmt_opts *opts);
-size_t muint_fmt_str(uintmax_t val, char *str, size_t len, const struct mint_fmt_opts *opts);
+size_t mint_fmt_str(intmax_t val, char *str, const struct mint_fmt_opts *opts);
+size_t muint_fmt_str(uintmax_t val, char *str, const struct mint_fmt_opts *opts);
+size_t mint_fmt_str_n(intmax_t val, char *str, size_t len, const struct mint_fmt_opts *opts);
+size_t muint_fmt_str_n(uintmax_t val, char *str, size_t len, const struct mint_fmt_opts *opts);
 size_t mint_fmt_file(intmax_t val, FILE *file, const struct mint_fmt_opts *opts);
 size_t muint_fmt_file(uintmax_t val, FILE *file, const struct mint_fmt_opts *opts);
 size_t mint_fmt(intmax_t val, mint_fmt_write_t write, void *write_arg, const struct mint_fmt_opts *opts);

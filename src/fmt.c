@@ -28,7 +28,15 @@ static bool mwrite_file_(char c, FILE *file);
 static size_t mxint_fmt_(uintmax_t val, bool is_signed, mint_fmt_write_t write, void *write_arg, const struct mint_fmt_opts *opts);
 static size_t mxint_fmt_write_str_(const char *str, mint_fmt_write_t write, void *write_arg);
 
-size_t mint_fmt_str(intmax_t val, char *str, size_t len, const struct mint_fmt_opts *opts) {
+size_t mint_fmt_str(intmax_t val, char *str, const struct mint_fmt_opts *opts) {
+    return mint_fmt_str_n(val, str, SIZE_MAX, opts);
+}
+
+size_t muint_fmt_str(uintmax_t val, char *str, const struct mint_fmt_opts *opts) {
+    return muint_fmt_str_n(val, str, SIZE_MAX, opts);
+}
+
+size_t mint_fmt_str_n(intmax_t val, char *str, size_t len, const struct mint_fmt_opts *opts) {
     struct mwrite_str_arg_ arg = {
         .str = str,
         .pos = 0,
@@ -38,7 +46,7 @@ size_t mint_fmt_str(intmax_t val, char *str, size_t len, const struct mint_fmt_o
     return mint_fmt(val, (mint_fmt_write_t) mwrite_str_, &arg, opts);
 }
 
-size_t muint_fmt_str(uintmax_t val, char *str, size_t len, const struct mint_fmt_opts *opts) {
+size_t muint_fmt_str_n(uintmax_t val, char *str, size_t len, const struct mint_fmt_opts *opts) {
     struct mwrite_str_arg_ arg = {
         .str = str,
         .pos = 0, 
