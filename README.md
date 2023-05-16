@@ -95,4 +95,4 @@ Go to the project's root folder and run the following command in the terminal:
 doxygen
 ```
 
-After this you will have documentaion build in the `/docs` folder.
+After this you will have a documentaion build in the `/docs` folder.
