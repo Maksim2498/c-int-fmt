@@ -66,7 +66,7 @@ cmake -B build -S .
 Then if you want to build it as a shared library run the following command:
 
 ```console
-cmake -DBUILD_SHARED_LIBS=ON
+cmake -DBUILD_SHARED_LIBS=ON build
 ```
 
 And finally build a library with the following command:
