@@ -87,9 +87,11 @@ cmake --install build
 
 ## Documentation
 
+You can wether use [online live documentation](https://docs.intstr.fominmv.ru) or build it locally.
+
 To build documentation locally you must have [Doxygen](https://www.doxygen.nl/) installed.
 
-Go to the project's root folder and run the following command in the terminal:
+When it's installed go to the project's root folder and run the following command in the terminal:
 
 ```console
 doxygen
