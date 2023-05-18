@@ -87,7 +87,7 @@ cmake --install build
 
 ## Documentation
 
-You can wether use [online live documentation](https://docs.intstr.fominmv.ru) or build it locally.
+You can wether use [online documentation](https://docs.intstr.fominmv.ru) or build it locally.
 
 To build documentation locally you must have [Doxygen](https://www.doxygen.nl/) installed.
 
