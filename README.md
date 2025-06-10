@@ -2,12 +2,12 @@
 
 ## Index
 
-- [Index](#index);
-- [About](#about);
-- [Examples](#examples);
-- [Building](#building);
-- [Installation](#installation);
-- [Documentation](#documentation).
+- [Index](#index)
+- [About](#about)
+- [Examples](#examples)
+- [Building](#building)
+- [Installation](#installation)
+- [Documentation](#documentation)
 
 ## About
 
